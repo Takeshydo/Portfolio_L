@@ -1,6 +1,7 @@
 ---
 import Header from "../components/header.astro";
 import Footer from "../components/footer.astro";
+const base = import.meta.env.BASE_URL;
 ---
 
 <!doctype html>
@@ -36,7 +37,7 @@ import Footer from "../components/footer.astro";
             <div class="affiche reveal">
                 <img
                     class="XC"
-                    src="/src/Graphique/XC_img.jpg"
+                    src={`${base}Graphique/XC_img.jpg`}
                     alt="Xenoblade Chronicles"
                 />
                 <h2>XENOBLADE CHRONICLES</h2>
@@ -54,7 +55,10 @@ import Footer from "../components/footer.astro";
             </section>
 
             <div class="affiche reveal">
-                <img src="/src/Graphique/FF16_img.jpg" alt="Final Fantasy 16" />
+                <img
+                    src={`${base}Graphique/FF16_img.jpg`}
+                    alt="Final Fantasy 16"
+                />
                 <h2>FINAL FANTASY</h2>
             </div>
 
@@ -71,7 +75,7 @@ import Footer from "../components/footer.astro";
 
             <div class="affiche reveal">
                 <img
-                    src="/src/Graphique/Persona5_img.png"
+                    src={`${base}Graphique/Persona5_img.png`}
                     alt="Persona 5 Royal"
                 />
                 <h2>PERSONA</h2>
@@ -90,7 +94,7 @@ import Footer from "../components/footer.astro";
             <div class="affiche reveal">
                 <img
                     class="OST"
-                    src="/src/Graphique/OST_img.jpg"
+                    src={`${base}Graphique/OST_img.jpg`}
                     alt="Orchestre"
                 />
                 <h2>LES OST</h2>
