@@ -1,6 +1,7 @@
 ---
 import Header from "../components/header.astro";
 import Footer from "../components/footer.astro";
+const base = import.meta.env.BASE_URL;
 ---
 
 <!doctype html>
@@ -39,7 +40,7 @@ import Footer from "../components/footer.astro";
             <div class="affiche reveal">
                 <img
                     class="SI"
-                    src="/src/Graphique/SI_img.webp"
+                    src={`${base}Graphique/SI_img.webp`}
                     alt="Space Invader"
                 />
                 <h2>Space Invader</h2>
@@ -63,7 +64,7 @@ import Footer from "../components/footer.astro";
             </section>
 
             <div class="affiche reveal">
-                <img src="/src/Graphique/PC_img.png" alt="PAC MAN" />
+                <img src={`${base}Graphique/PC_img.png`} alt="PAC MAN" />
                 <h2>PAC MAN</h2>
             </div>
 
@@ -85,7 +86,10 @@ import Footer from "../components/footer.astro";
             </section>
 
             <div class="affiche reveal">
-                <img src="/src/Graphique/Projet1_img.jpg" alt="XENO_COMBAT" />
+                <img
+                    src={`${base}Graphique/Projet1_img.jpg`}
+                    alt="XENO_COMBAT"
+                />
                 <h2>Projet 1</h2>
             </div>
 
@@ -107,7 +111,7 @@ import Footer from "../components/footer.astro";
             </section>
 
             <div class="affiche reveal">
-                <img src="/src/Graphique/Projet2_img.png" alt="Group" />
+                <img src={`${base}Graphique/Projet2_img.png`} alt="Group" />
                 <h2>Projet 2</h2>
             </div>
 
@@ -128,7 +132,7 @@ import Footer from "../components/footer.astro";
             </section>
 
             <div class="affiche reveal">
-                <img src="/src/Graphique/Projet3_img.jpg" alt="Projet3" />
+                <img src={`${base}Graphique/Projet3_img.jpg`} alt="Projet3" />
                 <h2>Projet 3</h2>
             </div>
 
