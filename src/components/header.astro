@@ -1,0 +1,27 @@
+---
+import "../styles/StylesPrincipale.css";
+const base = import.meta.env.BASE_URL;
+---
+
+<head>
+    <script type="module" src={`${base}Dynamisme/Scrolling.js`}></script>
+    <link rel="icon" href={`${base}favicon.ico`} />
+</head>
+
+<header>
+    <div class="Bande_H">
+        <h1 id="title_center">PortFolio</h1>
+        <div class="Burger">
+            <h3 id="title_menu">+ sur Moi</h3>
+            <nav class="menu">
+                <ul class="submenu">
+                    <li><a href={`${base}/`}>Qui suis-je</a></li>
+                    <li><a href={`${base}Snake`}>Un petit jeu ?</a></li>
+                    <li><a href={`${base}Inspiration`}>Mes Inspirations</a></li>
+                    <li><a href={`${base}Projet`}>Mes Projets</a></li>
+                    <li><a href={`${base}Ambitions`}>Mes ambitions</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>

@@ -1,0 +1,42 @@
+---
+import Header from "../components/header.astro";
+import Footer from "../components/footer.astro";
+---
+
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="/public/Graphique/Snake.css" rel="stylesheet" />
+        <script type="module" src="/public/Dynamisme/Snake.js"></script>
+        <title>Snake</title>
+    </head>
+
+    <body class="snake_page">
+        <Header />
+
+        <h1>🐍 Snake Game</h1>
+
+        <!-- Wrapper ajouté pour centrer le contenu principal -->
+        <div class="wrapper">
+            <div id="main-container">
+                <div id="info-game">
+                    <h3>Déplacement :</h3>
+                    <img src="public/Graphique/keymaps.png" alt="KeyMaps" />
+                </div>
+
+                <div id="game-container">
+                    <h2 id="score-zone">Score : 0</h2>
+                    <canvas id="board"></canvas>
+                </div>
+
+                <div id="start-container">
+                    <button id="Start_button">START</button>
+                </div>
+            </div>
+        </div>
+
+        <Footer />
+    </body>
+</html>

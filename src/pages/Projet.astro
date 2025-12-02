@@ -1,0 +1,154 @@
+---
+import Header from "../components/header.astro";
+import Footer from "../components/footer.astro";
+---
+
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap"
+            rel="stylesheet"
+        />
+        <title>Mes Projets</title>
+    </head>
+    <body>
+        <Header />
+
+        <div id="titlepage">
+            <h1>Mes Projets</h1>
+        </div>
+
+        <div class="details">
+            <section class="Intro_P reveal">
+                <p>
+                    Pour progresser dans le développement de jeux vidéo, il est
+                    essentiel de passer par des projets plus petits qui
+                    permettent d’expérimenter et d’apprendre. Surtout avec des
+                    moteurs comme <strong>Unity</strong> ou <strong
+                        >Unreal Engine</strong
+                    >, c’est en testant et en utilisant leurs outils que l’on
+                    acquiert le plus de compétences. Voici une sélection de
+                    projets réalisés principalement en solo, chacun m’ayant
+                    apporté des connaissances concrètes et spécifiques.
+                </p>
+            </section>
+
+            <div class="affiche reveal">
+                <img
+                    class="SI"
+                    src="/src/Graphique/SI_img.webp"
+                    alt="Space Invader"
+                />
+                <h2>Space Invader</h2>
+            </div>
+
+            <section class="SpaceInvader reveal">
+                <p>
+                    <strong>Space Invader</strong> est l’un de mes premiers projets
+                    rétro recréés avec <strong>Unity</strong>. Ce projet m’a
+                    permis de comprendre les mécaniques de génération répétitive
+                    des ennemis et la gestion efficace de la mémoire, notamment
+                    en créant des objets hors écran pour limiter les fuites et
+                    optimiser les performances. J’ai également appris à gérer le
+                    mouvement sur un plan <strong>2D</strong> fixe et à structurer
+                    le gameplay de manière fluide.
+                </p>
+                <a
+                    href="https://drive.google.com/file/d/1x7jpkXubP0ZaNZ67zJJrUUv9JZxGuiaz/view?usp=drive_link"
+                    >Vidéo</a
+                >
+            </section>
+
+            <div class="affiche reveal">
+                <img src="/src/Graphique/PC_img.png" alt="PAC MAN" />
+                <h2>PAC MAN</h2>
+            </div>
+
+            <section class="PM reveal">
+                <p>
+                    <strong>PAC MAN</strong> a été un projet plus complexe que Space
+                    Invader, m’immergeant dans la logique des <strong>IA</strong
+                    > et la conception de comportements adverses. J’ai renforcé mes
+                    compétences en <strong>debugging</strong> et en algorithmes tout
+                    en explorant le <strong>level design</strong> et la programmation
+                    d’intelligences artificielles adaptées à un jeu rétro. Ce projet
+                    a été un excellent exercice pour comprendre comment créer un
+                    gameplay équilibré et dynamique.
+                </p>
+                <a
+                    href="https://drive.google.com/file/d/1IcptHARAyq5EvLhazf8lnkeJarCkNELh/view?usp=drive_link"
+                    >Vidéo</a
+                >
+            </section>
+
+            <div class="affiche reveal">
+                <img src="/src/Graphique/Projet1_img.jpg" alt="XENO_COMBAT" />
+                <h2>Projet 1</h2>
+            </div>
+
+            <section class="Projet1 reveal">
+                <p>
+                    <strong>Projet 1</strong> m’a permis d’explorer <strong
+                        >Unreal Engine 5</strong
+                    > et de me concentrer sur le <strong
+                        >gameplay programming</strong
+                    > et l’<strong>UI programming</strong>. L’objectif était de
+                    recréer le système de combat de <strong
+                        >Xenoblade Chronicles</strong
+                    >, combinant deux langages différents pouvant communiquer
+                    ensemble. Ce projet a mis en lumière la puissance du moteur
+                    et la complexité de la gestion de pointeurs et de systèmes
+                    interconnectés, me donnant une expérience précieuse en
+                    programmation avancée.
+                </p>
+            </section>
+
+            <div class="affiche reveal">
+                <img src="/src/Graphique/Projet2_img.png" alt="Group" />
+                <h2>Projet 2</h2>
+            </div>
+
+            <section class="Projet2 reveal">
+                <p>
+                    <strong>Projet 2</strong> a été réalisé en groupe (4 développeurs),
+                    où j’ai assumé le rôle de <strong>Lead Developer</strong> pour
+                    coordonner le code et les niveaux sur <strong>Unity</strong
+                    >. J’ai été responsable de l’intégration des contributions
+                    de chacun et de la résolution des problèmes liés au build,
+                    tout en codant certains aspects du gameplay. Cette
+                    expérience a renforcé mes compétences en <strong
+                        >leadership</strong
+                    >, en <strong>debugging collaboratif</strong> et en communication
+                    efficace avec d’autres développeurs pour prendre des décisions
+                    cohérentes.
+                </p>
+            </section>
+
+            <div class="affiche reveal">
+                <img src="/src/Graphique/Projet3_img.jpg" alt="Projet3" />
+                <h2>Projet 3</h2>
+            </div>
+
+            <section class="Projet3 reveal">
+                <p>
+                    <strong>Projet 3</strong> est un projet en cours, développé à
+                    deux. Il est beaucoup plus ambitieux, couvrant la <strong
+                        >3D</strong
+                    >, les <strong>bases de données</strong>, l’<strong
+                        >UI</strong
+                    > et la gestion de pointeurs. L’objectif est de construire un
+                    code robuste à partir de zéro, sans modèle prédéfini, en appliquant
+                    les meilleures pratiques de programmation et d’architecture logicielle.
+                    Ce projet me permet de développer des compétences avancées en
+                    <strong>structuration de projet</strong> et en conception de
+                    systèmes complexes.
+                </p>
+            </section>
+        </div>
+
+        <Footer />
+    </body>
+</html>

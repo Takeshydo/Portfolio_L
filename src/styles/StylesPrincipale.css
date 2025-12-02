@@ -1,0 +1,438 @@
+/* ===== Corps de la page ===== */
+body {
+    background-color: #2b2b2b;
+    font-family: 'Share Tech Mono', monospace;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    text-align: center;
+    color: #f0f0f0;
+    transition: background-color 0.3s;
+}
+
+/* ===== Header et Footer ===== */
+.Bande_H,
+.Bande_F {
+    display: flex;
+    align-items: center;
+    padding: 20px 30px;
+    background-color: #1f2a38;
+    color: #f0f0f0;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Header spécifique pour centrer titre et menu */
+.Bande_H {
+    position: relative;
+    justify-content: center;
+    /* centre le contenu horizontalement */
+}
+
+#title_center {
+    font-size: 3rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 0 auto;
+    text-align: center;
+    z-index: 10;
+}
+
+.Burger {
+    position: absolute;
+    right: 30px;
+    /* même padding que .Bande_H */
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #1c2b40;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+    z-index: 20;
+}
+
+.Burger:hover {
+    background-color: #2a3b58;
+}
+
+.Burger .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #1c2b40;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 220px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    z-index: 1000;
+}
+
+.Burger .submenu li {
+    padding: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: #f0f0f0;
+    white-space: nowrap;
+    transition: background-color 0.3s;
+    text-align: center;
+    /* CENTRER LE TEXTE */
+}
+
+.Burger .submenu li:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.Burger:hover .submenu {
+    display: block;
+}
+
+.Burger .submenu li a {
+    color: inherit;
+    /* hérite de la couleur parente (blanc dans ton cas) */
+    text-decoration: none;
+    /* retire le soulignement */
+    transition: none;
+    /* désactive la transition de couleur */
+}
+
+.Burger .submenu li a:hover {
+    color: inherit;
+    /* ne change pas la couleur au survol */
+    text-decoration: none;
+    /* pas de soulignement au survol */
+    background-color: transparent;
+    /* retire tout fond coloré */
+}
+
+.Bande_F {
+    display: flex;
+    justify-content: center;
+    /* centre horizontalement tous les éléments */
+    align-items: center;
+    /* centre verticalement */
+    flex-wrap: wrap;
+    /* permet aux éléments de passer à la ligne si besoin */
+    gap: 40px;
+    /* espace entre les éléments */
+    padding: 20px 30px;
+    background-color: #1f2a38;
+    color: #f0f0f0;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+/* Si tu as des liens ou icônes dans le footer */
+.Bande_F a {
+    color: #f0f0f0;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.Bande_F a:hover {
+    color: #4CAF50;
+    /* ou une couleur qui match ton design */
+}
+
+/* Pour que les textes à l'intérieur aient un peu d'espace */
+.Bande_F p {
+    margin: 5px 0;
+}
+
+/* ===== Scroll-Telling ===== */
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1.5s ease-out;
+}
+
+.intro {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== Sections ===== */
+main {
+    padding: 50px 30px;
+    max-width: 900px;
+    margin: 0 auto;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section {
+    margin-bottom: 60px;
+    width: 100%;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    color: #f0f0f0;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+section p {
+    line-height: 1.8;
+    font-size: 1.3rem;
+    color: #dcdcdc;
+    text-align: center;
+}
+
+/* ===== Listes ===== */
+ul {
+    padding-left: 0;
+    list-style-type: none;
+    margin: 0 auto;
+    width: fit-content;
+    text-align: left;
+}
+
+/* ===== CADRES ===== */
+.programmation,
+.Outils {
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    background-color: rgba(50, 50, 60, 0.5);
+    padding: 25px;
+    border-radius: 14px;
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    margin-top: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.programmation:hover,
+.Outils:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* ===== COMPÉTENCES + BARRES ===== */
+li.skill {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 14px;
+    font-size: 1.3rem;
+    padding: 12px 18px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(50, 50, 50, 0.3);
+    border-radius: 12px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+li.skill:hover {
+    background-color: rgba(70, 70, 90, 0.4);
+    transform: translateX(3px);
+    animation: blink 1.2s infinite;
+}
+
+li.skill span {
+    min-width: 120px;
+    text-align: left;
+    white-space: nowrap;
+}
+
+/* ===== Barres d'XP ===== */
+.xp-segments {
+    display: flex;
+    gap: 6px;
+}
+
+.xp-segments div {
+    width: 40px;
+    height: 22px;
+    border: 2px solid #333;
+    border-radius: 6px;
+    background-color: #555;
+    box-shadow: inset 0 0 4px #000;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.xp-fill.green {
+    background-color: #4CAF50;
+    box-shadow: inset 0 0 6px #0f0;
+}
+
+.xp-empty {
+    background-color: #555;
+}
+
+/* ===== Liens ===== */
+section a {
+    text-decoration: none;
+    color: #f0f0f0;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+section a:hover {
+    color: #4CAF50;
+}
+
+/* Div parent en bande */
+.affiche {
+    position: relative;
+    width: 100vw;
+    height: 300px;
+    /* plus longue pour garder la bande */
+    overflow: hidden;
+
+    /* Départ pour le slide gauche */
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+/* Images */
+.affiche img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+    z-index: 1;
+    clip-path: polygon(0 0,
+            calc(100% - 100px) 0,
+            100% 100%,
+            0% 100%);
+
+    /* Départ pour le slide gauche */
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 1s ease-out 0.2s, opacity 1s ease-out 0.2s;
+    /* délai pour cascade */
+}
+
+/* Texte h2 devant l'image */
+.affiche h2 {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) translateX(-100%);
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 5px black;
+    opacity: 0;
+    transition: transform 1s ease-out 0.4s, opacity 1s ease-out 0.4s;
+    /* délai texte après l'image */
+}
+
+/* Classe active ajoutée par le JS lors du scroll */
+.affiche.active {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.affiche.active img {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.affiche.active h2 {
+    transform: translate(-50%, -50%) translateX(0);
+    opacity: 1;
+}
+
+/* Classe spécifique pour ajuster l'image si besoin */
+.affiche .XC {
+    object-position: center 80%;
+}
+
+.affiche .OST {
+    object-position: center 75%;
+}
+
+/* ===== Cartes Présent et Avenir ===== */
+.today,
+.tomorow {
+    background-color: rgba(50, 50, 50, 0.6);
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    border-radius: 14px;
+    padding: 25px;
+    margin: 20px auto;
+    max-width: 500px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    color: #f0f0f0;
+}
+
+/* Effet glow intérieur */
+.today::before,
+.tomorow::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, transparent 0%, transparent 60%, rgba(0, 255, 0, 0.2) 60%);
+    transform: rotate(45deg);
+    transition: all 0.5s ease;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.tomorow::before {
+    background: radial-gradient(circle, transparent 0%, transparent 60%, rgba(128, 0, 255, 0.2) 60%);
+}
+
+/* Texte au-dessus de la lumière */
+.today h2,
+.tomorow h2,
+.today p,
+.tomorow p {
+    position: relative;
+    z-index: 1;
+}
+
+/* Hover effect */
+.today:hover,
+.tomorow:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6), 0 0 30px rgba(0, 255, 0, 0.4);
+}
+
+.tomorow:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6), 0 0 30px rgba(128, 0, 255, 0.4);
+}
+
+
+/* ===== Animation clignotante ===== */
+@keyframes blink {
+    0% {
+        box-shadow: inset 0 0 4px #0f0;
+    }
+
+    50% {
+        box-shadow: inset 0 0 10px #0f0;
+    }
+
+    100% {
+        box-shadow: inset 0 0 4px #0f0;
+    }
+}
