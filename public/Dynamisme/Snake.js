@@ -21,8 +21,8 @@ var Score = 0;
 // Contrôle du jeu
 var gameInterval; // pour setInterval
 var gameOver = false;
-var eatSound = new Audio("eat_bip.mp3");
-var deathSound = new Audio("death_bip.mp3");
+var eatSound = new Audio("public/Dynamisme/eat_bip.mp3");
+var deathSound = new Audio("public/Dynamisme/death_bip.mp3");
 
 window.onload = function () {
     board = document.getElementById("board");
